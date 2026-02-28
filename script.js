@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Select elements to animate
-    const sections = document.querySelectorAll('.section-title, .about-content, .project-card, .skill-card');
+    const sections = document.querySelectorAll('.section-title, .about-content, .project-card, .skill-category');
 
     sections.forEach(el => {
         el.style.opacity = '0';
