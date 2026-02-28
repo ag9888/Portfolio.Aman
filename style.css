@@ -10,6 +10,14 @@
     --transition-speed: 0.3s;
 }
 
+.light-mode {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-glow: rgba(16, 185, 129, 0.2);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,8 +35,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     cursor: none;
-    /* Optional: hide default cursor if you want full customization, but keep it visible for usability usually. Let's keep default cursor visible but add glow behind. */
     cursor: default;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 
@@ -115,6 +123,30 @@ body {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition-speed);
+}
+
+.theme-btn:hover {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--accent-color);
 }
 
 .hamburger {
@@ -528,6 +560,24 @@ footer {
 
     .section {
         padding: 4rem 5%;
+    }
+}
+
+/* Desktop Specific Requirements: Max items in a single line */
+@media (min-width: 1024px) {
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #experience .projects-grid {
+        grid-template-columns: 1fr;
+        /* Force experience single card to fit fully if alone */
+        max-width: 800px;
+        margin: 0 auto;
     }
 }
 
