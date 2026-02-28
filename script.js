@@ -68,5 +68,40 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Theme Configuration
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Check for saved user preference, if any, on load of the website
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.body.classList.add(currentTheme);
+        if (currentTheme === 'light-mode') {
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+        }
+    }
+
+    themeToggle.addEventListener('click', () => {
+        // Toggle the .light-mode class on the body
+        document.body.classList.toggle('light-mode');
+
+        let theme = '';
+        if (document.body.classList.contains('light-mode')) {
+            theme = 'light-mode';
+            // Switch icons
+            moonIcon.style.display = 'none';
+            sunIcon.style.display = 'block';
+        } else {
+            // Switch icons back
+            moonIcon.style.display = 'block';
+            sunIcon.style.display = 'none';
+        }
+
+        // Save the current preference to localStorage
+        localStorage.setItem('theme', theme);
+    });
 
 });
