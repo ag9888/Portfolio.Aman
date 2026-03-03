@@ -14,8 +14,7 @@
 </head>
 
 <body>
-
-
+    <!-- Navbar -->
     <nav class="navbar">
         <a href="#home" class="logo">
             <img src="logo.svg" alt="Aman Logo">
@@ -28,36 +27,15 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
-                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-moon">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-                <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-sun" style="display: none;">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-            </button>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-image-wrapper">
@@ -96,22 +74,21 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I am a final-year student passionate about IT Support and Cyber Security. I have hands-on
-                        experience in Windows troubleshooting, networking fundamentals, Basic PowerShell scripting, and
-                        basic SOC operations. I enjoy solving technical issues, analyzing logs, and improving system
-                        security
-                        through practical lab environments. My goal is to start my career in IT Support or SOC Analysis
-                        where I can apply my troubleshooting and security skills.
-                    </p>
-                </div>
+                <p>
+                    I am a final-year student passionate about IT Support and Cyber Security. I have hands-on
+                    experience in Windows troubleshooting, networking fundamentals, PowerShell scripting, and basic
+                    SOC operations. I enjoy solving technical issues, analyzing logs, and improving system security
+                    through practical lab environments. My goal is to start my career in IT Support or SOC Analysis
+                    where I can apply my troubleshooting and security skills.
+                </p>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="section-title">Experience</h2>
             <div class="projects-grid">
@@ -119,11 +96,10 @@
                     <div class="project-info">
                         <h3>Intern</h3>
                         <p class="company"><strong>Polytropic</strong></p>
-                        <p class="duration" style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 1rem;">
-                            6 Months
-                            Duration</p>
-                        <p>Gained hands-on experience and developed multi-tasking abilities in:</p>
-                        <ul style="list-style-position: inside; margin-top: 10px; color: var(--text-secondary);">
+                        <p class="duration">6 Months Duration</p>
+                        <p class="experience-description">Gained hands-on experience and developed multi-tasking
+                            abilities in:</p>
+                        <ul class="experience-list">
                             <li>Territory Management</li>
                             <li>Time Management</li>
                             <li>Multi-tasking</li>
@@ -136,6 +112,7 @@
             </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section">
             <h2 class="section-title">Tech & Skills</h2>
             <div class="skills-container">
@@ -179,12 +156,13 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Project 1 – Windows Troubleshooting Lab</h3>
+                        <h3>Windows Troubleshooting Lab</h3>
                         <div class="project-learning">
                             <ul>
                                 <li>User account management</li>
@@ -194,13 +172,14 @@
                             </ul>
                         </div>
                         <div class="project-tags">
-                            <span>Windows</span><span>Troubleshooting</span>
+                            <span>Windows</span>
+                            <span>Troubleshooting</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Project 2 – PowerShell Automation</h3>
+                        <h3>PowerShell Automation</h3>
                         <div class="project-learning">
                             <ul>
                                 <li>Top CPU process monitoring</li>
@@ -209,13 +188,14 @@
                             </ul>
                         </div>
                         <div class="project-tags">
-                            <span>PowerShell</span><span>Automation</span>
+                            <span>PowerShell</span>
+                            <span>Automation</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Project 3 – Splunk Log Analysis Lab</h3>
+                        <h3>Splunk Log Analysis Lab</h3>
                         <div class="project-learning">
                             <ul>
                                 <li>Log ingestion</li>
@@ -224,13 +204,15 @@
                             </ul>
                         </div>
                         <div class="project-tags">
-                            <span>Splunk</span><span>Log Analysis</span>
+                            <span>Splunk</span>
+                            <span>Log Analysis</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
